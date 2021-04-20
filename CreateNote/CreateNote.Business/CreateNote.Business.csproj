@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="AnalisisInfo.Servicecs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="AnalisisInfo.Servicecs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="5.0.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CreateNote.Core\CreateNote.Core.csproj" />
+    <ProjectReference Include="..\CreateNote.Data\CreateNote.Data.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,17 @@
+mysql://
+bb3b063a6a284c
+:
+ae6f70ed
+@
+eu-cdbr-west-01.cleardb.com
+/heroku_c31bbe938c6a3f9?reconnect=true
+
+
+mysql://
+b1ffdb8786fe4b
+:
+b0f2c934
+@
+eu-cdbr-west-01.cleardb.com
+/
+heroku_b2a415631349ac5?reconnect=true

@@ -1,0 +1,29 @@
+﻿--CREATE PROCEDURE `Testingcase_SelectByObjectId`(in id int)
+--BEGIN
+--SELECT 
+--tc.Id,
+--tc.Date,
+--tc.Time_testing,
+--tc.Comments,
+--tc.Length,
+--d.id,
+--d.Name,
+--pr.id,
+--pr.Name,
+--s.id,
+--s.Name,
+--o.id,
+--o.Name,
+--pm.id,
+--pm.Rz,
+--pm.Ra,
+--pm.Rmax,
+--pm.Image
+--FROM heroku_c31bbe938c6a3f9.testingcase tc
+--inner join heroku_c31bbe938c6a3f9.device d on tc.Device = d.id
+--inner join heroku_c31bbe938c6a3f9.probe pr on tc.Probe = pr.Id
+--inner join heroku_c31bbe938c6a3f9.parameters pm on tc.Parameters = pm.Id
+--inner join heroku_c31bbe938c6a3f9.surface s on tc.surface = s.Id
+--inner join heroku_c31bbe938c6a3f9.object o on tc.Object = o.id
+--where o.id = id;
+--END
