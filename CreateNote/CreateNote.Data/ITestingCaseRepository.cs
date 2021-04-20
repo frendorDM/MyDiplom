@@ -12,7 +12,7 @@ namespace CreateNote.Data
         int AddProbe(ProbeDto probe);
         int AddObject(ObjectDto object1);
         int AddParameters(ParametersDto parameters);
-        TestingCaseDto GetParametersByIdObject(int id)
+        TestingCaseDto GetParametersByIdObject(int id);
 
 
     }

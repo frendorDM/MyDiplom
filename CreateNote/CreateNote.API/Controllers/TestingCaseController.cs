@@ -11,8 +11,11 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CreateNote.API.Controllers
 {
+    [ApiController]
+    [Route("api/[controller]")]
     public class TestingCaseController : ControllerBase
     {
+
         private ITestingCaseService _testingCaseService;
         private IMapper _mapper;
         public TestingCaseController(ITestingCaseService testingCaseService, IMapper mapper)
@@ -21,7 +24,7 @@ namespace CreateNote.API.Controllers
             _mapper = mapper;
         }
 
-        [HttpPost]
+        [HttpPost("device")]
         public ActionResult<DeviceOutputModel> CreateDevice([FromBody] DeviceInputModel device)
         {
             var id = _testingCaseService.AddDevice(_mapper.Map<DeviceDto>(device));
@@ -29,35 +32,35 @@ namespace CreateNote.API.Controllers
             return Ok(id);
         }
 
-        [HttpPost]
+        [HttpPost("probe")]
         public ActionResult<ProbeOutputModel> CreateProbe([FromBody] ProbeInputModel probe)
         {
             var id = _testingCaseService.AddProbe(_mapper.Map<ProbeDto>(probe));
             //var result = _mapper.Map<DeviceOutputModel>(_testingCaseService.GetDeviceById(id));
             return Ok(id);
         }
-        [HttpPost]
+        [HttpPost("object")]
         public ActionResult<ObjectOutputModel> CreateObject([FromBody] ObjectInputModel object1)
         {
             var id = _testingCaseService.AddObject(_mapper.Map<ObjectDto>(object1));
             //var result = _mapper.Map<DeviceOutputModel>(_testingCaseService.GetDeviceById(id));
             return Ok(id);
         }
-        [HttpPost]
+        [HttpPost("parameters")]
         public ActionResult<ParametersOutputModel> CreateParameters([FromBody] ParametersInputModel parameters)
         {
             var id = _testingCaseService.AddProbe(_mapper.Map<ProbeDto>(parameters));
             //var result = _mapper.Map<DeviceOutputModel>(_testingCaseService.GetDeviceById(id));
             return Ok(id);
         }
-        [HttpGet]
-        public ActionResult<TestingCaseOutputModel> GetTestingCaseByIdObject(int id) 
+        [HttpGet("object/{id}")]
+        public ActionResult<TestingCaseOutputModel> GetTestingCaseByIdObject(int id)
         {
             var testingCase = _mapper.Map<TestingCaseOutputModel>(_testingCaseService.GetTestingCaseByIdObject(id));
             return testingCase;
         }
 
-        [HttpGet]
+        [HttpGet("object/{id}/parameters")]
         public ActionResult<TestingCaseOutputModel> GetParametersByIdObject(int id)
         {
             var testingCase = _mapper.Map<TestingCaseOutputModel>(_testingCaseService.GetParametersByIdObject(id));

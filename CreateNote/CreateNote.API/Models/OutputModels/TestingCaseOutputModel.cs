@@ -9,7 +9,6 @@ namespace CreateNote.API.Models.OutputModels
     {
         public int Id { get; set; }
         public UserOutputModel User { get; set; }
-        public SurfaceOutputModel Surface { get; set; }
         public ObjectOutputModel Object { get; set; }
         public DeviceOutputModel Device { get; set; }
         public ParametersOutputModel Parameters { get; set; }
