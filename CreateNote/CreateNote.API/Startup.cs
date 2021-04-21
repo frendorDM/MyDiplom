@@ -36,8 +36,8 @@ namespace CreateNote.API
         {
             services.AddControllers();
             services.RegistrateServicesConfig();
+            services.AddAutoMapper(typeof(Startup));
             services.Configure<AppSettingsConfig>(Configuration);
-            services.Configure<SmtpSettings>(Configuration.GetSection("SmtpSettings"));
             services.AddCors();
         }
 

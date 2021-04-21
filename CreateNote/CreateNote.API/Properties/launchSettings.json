@@ -15,7 +15,7 @@
       "launchUrl": "weatherforecast",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "CONNECTION_STRING": "eu-cdbr-west-01.cleardb.com;DataBase=heroku_c31bbe938c6a3f9;User Id=bb3b063a6a284c;Password=ae6f70ed"
+        "CONNECTION_STRING": "server=eu-cdbr-west-01.cleardb.com;DataBase=heroku_c31bbe938c6a3f9;User Id=bb3b063a6a284c;Password=ae6f70ed;"
       }
     },
     "CreateNote.API": {

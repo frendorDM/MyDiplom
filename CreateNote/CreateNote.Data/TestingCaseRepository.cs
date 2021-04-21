@@ -34,7 +34,7 @@ namespace CreateNote.Data
             var testingCaseDictionary = new Dictionary<int, TestingCaseDto>();
             var testingCase = _connection
                 .Query<TestingCaseDto, UserDto, ObjectDto, DeviceDto, ParametersDto, ProbeDto, TestingCaseDto>(
-                "Testingcase_SelectByObjectId",
+                "call Testingcase_SelectByObjectId",
                 (testingCase, user, object1, device, pararmeters, probe) =>
                 {
                     if (!testingCaseDictionary.TryGetValue(testingCase.id, out TestingCaseDto testingCaseEntry))
